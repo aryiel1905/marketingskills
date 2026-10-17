@@ -11,6 +11,12 @@ This repository contains **Agent Skills** for AI agents following the [Agent Ski
 - **Creator**: Corey Haines
 - **License**: MIT
 
+## Fork-specific context routing
+
+This fork keeps the upstream creator's attribution. For modified skills, resolve the named project using `skills/product-marketing/references/multi-project-context.md` before drafting. Client, independent product, and academic contexts must remain separate. The public fork contains placeholder templates only; do not commit actual client contact data, internal results, credentials, or unpublished claims. A target result is not an achieved result. Only the selected context supplies voice, proof, image rules, and approval owners.
+
+When syncing upstream, review changes to the modified skills and their `metadata.version` values before merging. Do not blindly pull upstream over this fork's routing and evidence rules.
+
 ## Repository Structure
 
 ```
@@ -224,7 +230,7 @@ For tools without native MCP servers (Salesforce, LinkedIn Ads, Google Sheets, S
 When using any skill from this repository:
 
 1. **Once per session**, on first skill use, check for updates:
-   - Fetch `VERSIONS.md` from GitHub: https://raw.githubusercontent.com/coreyhaines31/marketingskills/main/VERSIONS.md
+   - Check this fork's local `VERSIONS.md`. If an upstream comparison is useful, fetch https://raw.githubusercontent.com/coreyhaines31/marketingskills/main/VERSIONS.md separately and review conflicts with the fork's modified skills.
    - Compare versions against local skill files
 
 2. **Only prompt if meaningful**:
@@ -239,8 +245,8 @@ When using any skill from this repository:
    ```
 
 4. **If user says "update skills"**:
-   - Run `git pull` in the marketingskills directory
-   - Confirm what was updated
+   - Fetch upstream and review the diff against this fork's context and evidence rules before merging; do not blindly `git pull` over customizations.
+   - Confirm what changed after validation.
 
 ## Skill Categories
 

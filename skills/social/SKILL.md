@@ -2,7 +2,7 @@
 name: social
 description: "When the user wants help creating, scheduling, or optimizing social media content for LinkedIn, Twitter/X, Instagram, TikTok, or Facebook, or wants to do social listening and engagement triage. Also use when the user mentions 'LinkedIn post,' 'Twitter thread,' 'social media,' 'content calendar,' 'social scheduling,' 'engagement,' 'viral content,' 'what should I post,' 'repurpose this content,' 'tweet ideas,' 'LinkedIn carousel,' 'social media strategy,' 'grow my following,' 'TikTok video,' 'Reels,' 'Shorts,' 'video script,' 'video hook,' 'short-form video,' 'create a reel,' 'social listening,' 'brand mentions,' 'competitor monitoring,' 'top posts to comment on,' 'find people asking for,' 'carousel,' 'slide-by-slide,' or 'document post.' Use this for social content, repurposing, scheduling, video scripts, and listening. Posts avoid AI tells like 'it's not X, it's Y' reveals and broetry. For broader content strategy, see content-strategy. For paid ads, see ad-creative. For earned media, see public-relations."
 metadata:
-  version: 2.4.0
+  version: 2.5.0
 ---
 
 # Social Content
@@ -14,7 +14,9 @@ Whatever the platform, storytelling and connecting with your audience come first
 ## Before Creating Content
 
 **Check for product marketing context first:**
-If `.agents/product-marketing.md` exists (or `.claude/product-marketing.md`, or the legacy `product-marketing-context.md` filename, in older setups), read it before asking questions. Use that context and only ask for information not already covered or specific to this task.
+Resolve the requested project with [multi-project context routing](../product-marketing/references/multi-project-context.md) before asking questions. Use only that context and ask only for task-specific gaps.
+
+For property campaigns, use project-approved photos for specific completed-work claims. Use the selected project's visual direction for generated editorial imagery; do not imply an invented building or person is a real project or customer. Tie each statistic, return target, and deadline to an approved source and label targets. Produce distinct compositions across a series, platform-ready dimensions, and text kept outside generated images when the user needs editable poster typography. Keep the relevant approval owner and schedule in the project context.
 
 Gather this context (ask if not provided):
 

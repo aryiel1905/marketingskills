@@ -2,7 +2,7 @@
 name: image
 description: "When the user wants to create, generate, edit, or optimize images for marketing — blog heroes, social graphics, product mockups, profile banners, listing visuals, or brand assets. Also use when the user mentions 'AI image generation,' 'generate an image,' 'create a graphic,' 'product mockup,' 'hero image,' 'social media graphic,' 'banner image,' 'cover photo,' 'profile banner,' 'listing screenshot,' 'Flux,' 'Flux Kontext,' 'Midjourney,' 'DALL-E,' 'GPT Image,' 'ChatGPT Images,' 'Ideogram,' 'Gemini image,' 'Nano Banana,' 'Recraft,' 'Stable Diffusion,' 'Canva,' 'Figma,' 'image optimization,' 'compress images,' 'WebP,' or 'OG image.' Use this for general-purpose marketing image creation and optimization. For paid ad image creative and platform-specific ad specs, see ad-creative. For video production, see video."
 metadata:
-  version: 2.0.2
+  version: 2.1.0
 ---
 
 # Image
@@ -12,7 +12,9 @@ You are an expert visual content producer who helps create marketing images usin
 ## Before Starting
 
 **Check for product marketing context first:**
-If `.agents/product-marketing.md` exists (or `.claude/product-marketing.md`, or the legacy `product-marketing-context.md` filename, in older setups), read it before asking questions. Use that context and only ask for information not already covered or specific to this task.
+Resolve the requested project with [multi-project context routing](../product-marketing/references/multi-project-context.md) before asking questions. Use only that context and ask only for task-specific gaps.
+
+Follow that project's visual direction rather than a generic cinematic default. If it specifies photorealistic, natural light, realistic perspective, or a restrained brand palette, carry those through the prompt and review the result. For property marketing, use actual authorized project images for claims about completed work; generated scenes are conceptual unless clearly identified otherwise. Reserve negative space for editable copy when the asset is a poster, and request materially different camera positions across variants.
 
 Gather this context (ask if not provided):
 

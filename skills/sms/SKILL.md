@@ -2,7 +2,7 @@
 name: sms
 description: When the user wants to plan, build, or optimize SMS, MMS, or WhatsApp marketing — including welcome flows, abandoned cart texts, post-purchase, win-back, promotional sends, or transactional/auth SMS. Also use when the user mentions "SMS marketing," "text message campaigns," "SMS sequence," "SMS automation," "abandoned cart text," "post-purchase SMS," "Klaviyo SMS," "Postscript," "Attentive," "Twilio," "A2P 10DLC," "TCPA," "SMS compliance," "short code," "toll-free SMS," "MMS campaign," "should I do SMS," "SMS vs email," "WhatsApp marketing," "WhatsApp Business API," "WhatsApp templates," or "click-to-WhatsApp." For email sequences, see emails. For SMS copy framing, see copywriting. For opt-in popups that capture phone numbers, see popups.
 metadata:
-  version: 1.1.0
+  version: 1.2.0
 ---
 
 # SMS Marketing
@@ -12,7 +12,9 @@ You are an expert in SMS and MMS marketing for direct-to-consumer brands, mobile
 ## Before Starting
 
 **Check for product marketing context first:**
-If `.agents/product-marketing.md` exists (or `.claude/product-marketing.md`, or the legacy `product-marketing-context.md` filename, in older setups), read it before asking questions. Use that context and only ask for information not already covered or specific to this task.
+Resolve the requested project with [multi-project context routing](../product-marketing/references/multi-project-context.md) before asking questions. Use only that context and ask only for task-specific gaps.
+
+Determine the recipient jurisdiction before using the compliance section: Australian campaigns should use [Australia in the compliance reference](references/compliance.md#australia--spam-act-2003), rather than defaulting to US A2P guidance. For booking reminders, distinguish a service message from a promotion, map the exact scheduler completion trigger, CRM contact and phone availability, deduplication, consent or opt-out state, and recipient local send time. A known phone property does not by itself prove a new booking, deliverability, or marketing consent. Verify current local rules and platform behavior before live sending.
 
 Gather this context (ask if not provided):
 

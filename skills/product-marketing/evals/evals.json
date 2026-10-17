@@ -93,6 +93,19 @@
         "Preserves prior changelog entries unchanged"
       ],
       "files": []
+    },
+    {
+      "id": 8,
+      "prompt": "I manage a property client and my own indie developer product in one workspace. The active pointer says property, but I want to update the indie product positioning. Where should you save the context?",
+      "expected_output": "Use the explicitly named indie project context under .agents/marketing-contexts/, override the active pointer, preserve the property file and project attribution, and show the updated indie context and changelog before saving.",
+      "assertions": [
+        "Named indie project overrides active pointer",
+        "Selects separate indie project context file",
+        "Does not overwrite or merge property client context",
+        "Preserves personal authorship and project scope",
+        "Versions and records the selected context update"
+      ],
+      "files": []
     }
   ]
 }

@@ -1,5 +1,7 @@
 # Marketing Skills for AI Agents
 
+> **Aryiel's fork:** This branch adds project-scoped context and evidence-first marketing guidance. The original library is by Corey Haines. See [multi-project context routing](skills/product-marketing/references/multi-project-context.md) and the [property](skills/product-marketing/assets/property-development.example.md) and [independent product](skills/product-marketing/assets/indie-product.example.md) starter files. Keep actual client contexts in the respective project workspace. Upstream installation examples below refer to Corey's original repository; use this fork's URL to install these customizations.
+
 A collection of AI agent skills focused on marketing tasks. Built for technical marketers and founders who want AI coding agents to help with conversion optimization, copywriting, SEO, analytics, and growth engineering. Works with Claude Code, OpenAI Codex, Cursor, Windsurf, and any agent that supports the [Agent Skills spec](https://agentskills.io).
 
 Built by [Corey Haines](https://corey.co?ref=marketingskills). Need hands-on help? Check out [Conversion Factory](https://conversionfactory.co?ref=marketingskills) — Corey's agency for conversion optimization, landing pages, and growth strategy. Want to learn more about marketing? Subscribe to [Swipe Files](https://swipefiles.com?ref=marketingskills). Want to get dangerously good at using AI for marketing? Check out [AI Marketing Training](https://conversionfactory.co/offers/ai-marketing-training?ref=marketingskills). Want an autonomous AI agent that uses these skills to be your CMO? Try [Magister](https://magistermarketing.com?ref=marketingskills).
@@ -32,7 +34,7 @@ Skills are markdown files that give AI agents specialized knowledge and workflow
 
 ## How Skills Work Together
 
-Skills reference each other and build on shared context. The `product-marketing` skill is the foundation — every other skill checks it first to understand your product, audience, and positioning before doing anything.
+Skills reference each other and build on shared context. The `product-marketing` skill captures product, audience, and positioning. This fork's modified skills resolve separate context files when a workspace serves multiple projects; other upstream skills may still check only the default `.agents/product-marketing.md`.
 
 ```
                             ┌──────────────────────────────────────┐
