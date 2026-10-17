@@ -2,7 +2,7 @@
 name: marketing-psychology
 description: "When the user wants to apply psychological principles, mental models, or behavioral science to marketing. Also use when the user mentions 'psychology,' 'mental models,' 'cognitive bias,' 'persuasion,' 'behavioral science,' 'why people buy,' 'decision-making,' 'consumer behavior,' 'anchoring,' 'social proof,' 'scarcity,' 'loss aversion,' 'framing,' or 'nudge.' Use this whenever someone wants to understand or leverage how people think and make decisions in a marketing context. For applying psychology to specific pages, see cro; for pricing tactics, see pricing; for copy framing, see copywriting."
 metadata:
-  version: 2.0.0
+  version: 2.1.0
 ---
 
 # Marketing Psychology & Mental Models
@@ -12,7 +12,7 @@ You are an expert in applying psychological principles and mental models to mark
 ## How to Use This Skill
 
 **Check for product marketing context first:**
-If `.agents/product-marketing.md` exists (or `.claude/product-marketing.md`, or the legacy `product-marketing-context.md` filename, in older setups), read it before applying mental models. Use that context to tailor recommendations to the specific product and audience.
+Resolve one project's context with [multi-project context routing](../product-marketing/references/multi-project-context.md) before applying mental models. Use only that project's audience, evidence, voice, and approval boundaries.
 
 Mental models are thinking tools that help you make better decisions, understand customer behavior, and create more effective marketing. When helping users:
 
@@ -20,6 +20,16 @@ Mental models are thinking tools that help you make better decisions, understand
 2. Explain the psychology behind the model
 3. Provide specific marketing applications
 4. Suggest how to implement ethically
+
+### Diagnose before prescribing
+
+Identify the desired action, audience stage, observed friction, and evidence for that friction. Check a broken form, unclear offer, slow page, or mismatched traffic before attributing behavior to a cognitive bias. Pick the two or three best-fitting models and state why each fits; the catalog is a menu, not a checklist. Separate **observed fact**, **hypothesis**, and **missing evidence**. If no conversion data exists, label recommendations as hypotheses.
+
+For each proposed change, give the current element, concrete replacement, mechanism, measurement event, and the outcome that would disconfirm the hypothesis. Route experiment design and sample sizing to **ab-testing**. Keep reported outcomes distinct from targets and forecasts.
+
+### Evidence and choice integrity
+
+Verify testimonials, project imagery, authority credentials, comparative prices, savings, return figures, and deadlines against the selected project's approved sources. Do not invent scarcity, social proof, ROI, customer stories, or an original price. Avoid a preselected paid option or an opt-in that makes declining harder. Make the total price, alternatives, and exit path clear. If a persuasive tactic could obscure an important choice, propose a transparent version or omit it.
 
 ---
 
@@ -428,10 +438,10 @@ When facing a marketing challenge, consider:
 | Low conversions | Hick's Law, Activation Energy, BJ Fogg, Friction |
 | Price objections | Anchoring, Framing, Mental Accounting, Loss Aversion |
 | Building trust | Authority, Social Proof, Reciprocity, Pratfall Effect |
-| Increasing urgency | Scarcity, Loss Aversion, Zeigarnik Effect |
+| Explaining a genuine deadline | Scarcity with verified availability and dates |
 | Retention/churn | Endowment Effect, Switching Costs, Status-Quo Bias |
 | Growth stalling | Theory of Constraints, Local vs Global Optima, Compounding |
-| Decision paralysis | Paradox of Choice, Default Effect, Nudge Theory |
+| Decision paralysis | Paradox of Choice, clearer comparison, fewer choices |
 | Onboarding | Goal-Gradient, IKEA Effect, Commitment & Consistency |
 
 ---

@@ -2,7 +2,7 @@
 name: emails
 description: When the user wants to create or optimize an email sequence, drip campaign, automated email flow, or lifecycle email program. Also use when the user mentions "email sequence," "drip campaign," "nurture sequence," "onboarding emails," "welcome sequence," "re-engagement emails," "email automation," "lifecycle emails," "trigger-based emails," "email funnel," "email workflow," "what emails should I send," "welcome series," or "email cadence." Use this for any multi-email automated flow. Emails avoid AI tells like 'it's not X, it's Y' reveals, 'no X, no Y, no Z' lists, and fake 'Re:' subject lines. For cold outreach and outbound sequences, see cold-email. For in-app onboarding, see onboarding.
 metadata:
-  version: 2.1.4
+  version: 2.2.0
 ---
 
 # Email Sequence Design
@@ -22,7 +22,9 @@ Load the matching reference before drafting or auditing the relevant part of a s
 ## Initial Assessment
 
 **Check for product marketing context first:**
-If `.agents/product-marketing.md` exists (or `.claude/product-marketing.md`, or the legacy `product-marketing-context.md` filename, in older setups), read it before asking questions. Use that context and only ask for information not already covered or specific to this task.
+Resolve the requested project with [multi-project context routing](../product-marketing/references/multi-project-context.md) before asking questions. Use only that context and ask only for task-specific gaps.
+
+For CRM campaigns, separate consent and unsubscribe status from engagement filters and deliverability safeguards. Verify active-list criteria, suppression rules, hard-bounce handling, workflow re-enrollment, and the actual send timezone before recommending a blast or re-engagement path. Do not suggest sending to unsubscribed contacts. State which contacts are eligible for each send and how later workflow steps behave if an earlier email is suppressed or stopped; verify platform behavior when it matters.
 
 Check its **Learnings** section before drafting: angles, offers, and formats already tested there shouldn't be re-proposed as new ideas, and active lessons apply unless the user says otherwise.
 

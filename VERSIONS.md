@@ -7,7 +7,7 @@ Current versions of all skills. Agents can compare against local versions to che
 | ab-testing | 2.0.2 | 2026-10-12 |
 | ad-creative | 2.12.1 | 2026-10-15 |
 | ai-seo | 2.9.0 | 2026-10-15 |
-| analytics | 2.2.0 | 2026-10-15 |
+| analytics | 2.3.0 | 2026-10-17 |
 | aso | 2.0.2 | 2026-10-08 |
 | attribution | 1.1.5 | 2026-10-12 |
 | churn-prevention | 2.0.3 | 2026-10-12 |
@@ -18,14 +18,14 @@ Current versions of all skills. Agents can compare against local versions to che
 | competitors | 2.3.0 | 2026-10-01 |
 | content-strategy | 2.1.3 | 2026-10-07 |
 | copy-editing | 2.2.0 | 2026-10-15 |
-| copywriting | 2.3.1 | 2026-10-15 |
-| cro | 2.0.3 | 2026-10-08 |
+| copywriting | 2.4.0 | 2026-10-17 |
+| cro | 2.1.0 | 2026-10-17 |
 | customer-research | 2.0.4 | 2026-10-02 |
 | directory-submissions | 2.1.1 | 2026-10-08 |
-| emails | 2.1.4 | 2026-10-15 |
+| emails | 2.2.0 | 2026-10-17 |
 | events | 1.0.0 | 2026-08-23 |
 | free-tools | 2.0.2 | 2026-10-15 |
-| image | 2.0.2 | 2026-10-02 |
+| image | 2.1.0 | 2026-10-17 |
 | influencer-marketing | 1.4.0 | 2026-10-15 |
 | launch | 2.2.0 | 2026-10-07 |
 | lead-magnets | 2.1.0 | 2026-10-08 |
@@ -33,29 +33,37 @@ Current versions of all skills. Agents can compare against local versions to che
 | marketing-ideas | 2.0.1 | 2026-08-23 |
 | marketing-loops | 1.6.0 | 2026-10-15 |
 | marketing-plan | 1.2.2 | 2026-10-12 |
-| marketing-psychology | 2.0.0 | 2026-05-05 |
+| marketing-psychology | 2.1.0 | 2026-10-17 |
 | offers | 1.0.2 | 2026-10-12 |
 | onboarding | 2.0.2 | 2026-10-12 |
 | ads | 2.6.1 | 2026-10-15 |
 | paywalls | 2.0.0 | 2026-05-05 |
 | popups | 2.0.0 | 2026-05-05 |
 | pricing | 2.1.4 | 2026-10-12 |
-| product-marketing | 2.2.0 | 2026-10-15 |
+| product-marketing | 2.3.0 | 2026-10-17 |
 | programmatic-seo | 2.1.0 | 2026-10-06 |
 | prospecting | 1.3.0 | 2026-10-08 |
 | public-relations | 1.2.0 | 2026-10-02 |
 | referrals | 2.2.1 | 2026-10-12 |
-| revops | 2.2.1 | 2026-10-12 |
+| revops | 2.3.0 | 2026-10-17 |
 | sales-enablement | 2.4.0 | 2026-10-07 |
 | schema | 2.0.2 | 2026-10-08 |
 | seo-audit | 2.2.1 | 2026-10-12 |
 | signup | 2.0.1 | 2026-10-08 |
 | site-architecture | 2.1.0 | 2026-10-06 |
-| sms | 1.1.0 | 2026-10-02 |
-| social | 2.4.0 | 2026-10-14 |
+| sms | 1.2.0 | 2026-10-17 |
+| social | 2.5.0 | 2026-10-17 |
 | video | 2.2.1 | 2026-10-02 |
 
 ## Recent Changes
+
+### 2.11.38 (2026-10-17) — personal fork customization
+
+Project-scoped marketing context and evidence-first guidance for appointment funnels, CRM campaigns, and visual briefs. This fork retains upstream attribution and avoids storing client campaign facts in public skill files.
+
+- **product-marketing** (2.2.0 → 2.3.0): multi-project context routing, independent and property example templates, and context isolation.
+- **marketing-psychology** (2.0.0 → 2.1.0): diagnose friction before choosing models, verify claims, preserve genuine choice, and measure hypotheses.
+- **cro, copywriting, emails, sms, social, image, revops, analytics**: project routing and task-specific checks for landing page bookings, consent, deliverability, Australian SMS, verified project imagery, and CRM reporting grain.
 
 ### 2.11.37 (2026-10-15)
 

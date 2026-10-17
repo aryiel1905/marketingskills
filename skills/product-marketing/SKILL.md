@@ -1,21 +1,21 @@
 ---
 name: product-marketing
-description: "When the user wants to create or update their product marketing context document. Also use when the user mentions 'product context,' 'marketing context,' 'set up context,' 'positioning,' 'who is my target audience,' 'describe my product,' 'ICP,' 'ideal customer profile,' 'brand voice,' 'tone of voice,' 'brand guidelines,' 'what have we learned,' 'log this learning,' or wants to avoid repeating foundational information across marketing tasks. Use this at the start of any new project before using other marketing skills — it creates `.agents/product-marketing.md` that all other skills reference for product, audience, and positioning context."
+description: "When the user wants to create or update product marketing context for one or multiple projects. Also use when the user mentions 'product context,' 'marketing context,' 'set up context,' 'positioning,' 'who is my target audience,' 'describe my product,' 'ICP,' 'ideal customer profile,' 'brand voice,' 'tone of voice,' 'brand guidelines,' 'what have we learned,' 'log this learning,' or wants to avoid repeating foundational information across marketing tasks. Use this at the start of a new project; create `.agents/product-marketing.md` for one project or select `.agents/marketing-contexts/<project-slug>.md` for multiple brands or clients."
 metadata:
-  version: 2.2.0
+  version: 2.3.0
 ---
 
 # Product Marketing Context
 
 You help users create and maintain a product marketing context document. This captures foundational positioning and messaging information that other marketing skills reference, so users don't repeat themselves.
 
-The document is stored at `.agents/product-marketing.md`.
+For a single project, store the document at `.agents/product-marketing.md`. For multiple projects, use one file per project under `.agents/marketing-contexts/`. Read [references/multi-project-context.md](references/multi-project-context.md) before selecting or updating a context. Its [property development](assets/property-development.example.md) and [independent product](assets/indie-product.example.md) starters are placeholders, not facts about a client or product.
 
 ## Workflow
 
 ### Step 1: Check for Existing Context
 
-First, check if `.agents/product-marketing.md` already exists. Also check `.claude/product-marketing.md` and the legacy filename `product-marketing-context.md` (in either `.agents/` or `.claude/`) for older setups — if found anywhere other than `.agents/product-marketing.md`, offer to move it to the canonical location.
+First, resolve the project and file using [multi-project context routing](references/multi-project-context.md). Check `.agents/product-marketing.md` for a single project; also check `.claude/product-marketing.md` and the legacy filename `product-marketing-context.md` for older setups. Offer a move only after confirming that the content belongs to the selected project. Never overwrite another project's context.
 
 **If it exists:**
 - Read it and summarize what's captured — note its current **Document version** and the last few **Changelog** entries so the user sees where the doc stands and what's changed recently
@@ -142,10 +142,13 @@ Start this empty. It fills up as work ships (see "Maintaining Learnings" below).
 
 ## Step 3: Create the Document
 
-After gathering information, create `.agents/product-marketing.md` with this structure:
+After gathering information, create the selected project's context file with this structure. Use `.agents/product-marketing.md` for one project or `.agents/marketing-contexts/<project-slug>.md` when several share a workspace:
 
 ```markdown
 # Product Marketing Context
+
+Project: [name]
+Context scope: [client, independent product, or academic project]
 
 **Document version:** v1
 **Last updated:** [date]
@@ -283,8 +286,8 @@ After gathering information, create `.agents/product-marketing.md` with this str
     - `- v2 (2026-06-02) — Rewrote value prop and objections after 5 customer interviews; added competitor Acme.`
   - Use today's date in ISO form (YYYY-MM-DD) for the entry and `Last updated`.
   - **Pure typo-only fix:** don't bump the version or add a changelog entry — just save the correction. Every other change bumps the version and gets an entry. When the change is a real repositioning, say so plainly — downstream skills will now generate against the new context.
-- Save to `.agents/product-marketing.md`
-- Tell them: "Other marketing skills will now use this context automatically. The Changelog at the bottom tracks every revision — check it to see how your positioning has evolved. Run `/product-marketing` anytime to update it."
+- Save to the selected project file. If useful, create `.agents/active-marketing-context.md` using the pointer format in [multi-project context routing](references/multi-project-context.md); explicit project names always override it.
+- Tell them which project file was saved, and that the Changelog tracks revisions. Other skills that implement the multi-project routing read this context; check an older skill's context instructions before relying on it.
 
 ---
 

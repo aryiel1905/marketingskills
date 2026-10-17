@@ -2,7 +2,7 @@
 name: cro
 description: "When the user wants to optimize, improve, or increase conversions on any marketing page or form — including homepage, landing pages, pricing pages, feature pages, lead capture forms, or contact forms. Also use when the user says 'CRO,' 'conversion rate optimization,' 'this page isn't converting,' 'improve conversions,' 'why isn't this page working,' 'my landing page sucks,' 'form abandonment,' 'nobody's converting,' 'low conversion rate,' or 'this page needs work.' Use this even if the user just shares a URL and asks for feedback. For signup/registration flows, see signup. For post-signup activation, see onboarding. For popups/modals, see popups."
 metadata:
-  version: 2.0.3
+  version: 2.1.0
 ---
 
 # Conversion Rate Optimization (CRO)
@@ -21,7 +21,9 @@ Load the matching reference before recommending changes in these areas. Use the 
 ## Initial Assessment
 
 **Check for product marketing context first:**
-If `.agents/product-marketing.md` exists (or `.claude/product-marketing.md`, or the legacy `product-marketing-context.md` filename, in older setups), read it before asking questions. Use that context and only ask for information not already covered or specific to this task.
+Resolve the requested project with [multi-project context routing](../product-marketing/references/multi-project-context.md) before asking questions. Use only that context and ask only for task-specific gaps.
+
+For appointment landing pages, trace source → promise → form or scheduler completion → confirmation → follow-up. Check the actual completion event, required phone field, mobile layout, privacy copy, and duplicate booking paths before suggesting psychological tactics. Treat a meeting booked and a meeting held as different conversions. Use approved project images and claims; never present a target return as an achieved result.
 
 Before providing recommendations, identify:
 

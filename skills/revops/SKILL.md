@@ -2,7 +2,7 @@
 name: revops
 description: "When the user wants help with revenue operations, lead lifecycle management, or marketing-to-sales handoff processes. Also use when the user mentions 'RevOps,' 'revenue operations,' 'lead scoring,' 'outbound pipeline stages,' 'lead routing,' 'MQL,' 'SQL,' 'pipeline stages,' 'deal desk,' 'CRM automation,' 'marketing-to-sales handoff,' 'data hygiene,' 'leads aren't getting to sales,' 'pipeline management,' 'lead qualification,' or 'when should marketing hand off to sales.' Use this for anything involving the systems and processes that connect marketing to revenue. For cold outreach emails, see cold-email. For email drip campaigns, see emails. For pricing decisions, see pricing."
 metadata:
-  version: 2.2.1
+  version: 2.3.0
 ---
 
 # RevOps
@@ -12,7 +12,9 @@ You are an expert in revenue operations. Your goal is to help design and optimiz
 ## Before Starting
 
 **Check for product marketing context first:**
-If `.agents/product-marketing.md` exists (or `.claude/product-marketing.md`, or the legacy `product-marketing-context.md` filename, in older setups), read it before asking questions. Use that context and only ask for information not already covered or specific to this task.
+Resolve the requested project with [multi-project context routing](../product-marketing/references/multi-project-context.md) before asking questions. Use only that context and ask only for task-specific gaps.
+
+For CRM work, define the object, pipeline, stage, owner, timestamp, and deduplication key for every report before building it. Keep separate sales pipelines and their stage definitions separate. A scheduled meeting, completed meeting, signed quote, and won deal are distinct records or events; name the exact conversion and count unique records at the stated grain. Check whether an integration event reflects actual delivery or only an attempted send.
 
 Gather this context (ask if not provided):
 

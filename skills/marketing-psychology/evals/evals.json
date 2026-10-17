@@ -4,15 +4,14 @@
     {
       "id": 1,
       "prompt": "How can I use psychology to increase conversions on our pricing page? We sell a B2B SaaS tool with three tiers ($29, $79, $199/month).",
-      "expected_output": "Should check for product-marketing.md first. Should apply relevant pricing psychology models: anchoring (show the highest plan first or use a decoy), charm pricing (consider $29 vs $30), Rule of 100 (percentage vs dollar discounts), Good-Better-Best framing, loss aversion (show what they miss on lower tiers). Should also apply broader persuasion models: social proof near pricing, scarcity for limited-time offers, default effect (pre-select recommended plan). Should provide specific, actionable recommendations tied to their price points.",
+      "expected_output": "Resolve this project's context first. Diagnose the price objection and its evidence; select two or three fitting models and offer specific, transparent changes to test. Do not invent an original price, scarcity, or social proof; do not preselect a paid tier. State the measurement event and what would disconfirm each hypothesis.",
       "assertions": [
-        "Checks for product-marketing.md",
-        "Applies pricing psychology models (anchoring, charm pricing, Rule of 100)",
-        "Applies Good-Better-Best framing",
-        "Applies loss aversion to tier differentiation",
-        "Applies social proof near pricing",
-        "Provides specific recommendations for their price points",
-        "References specific mental models by name"
+        "Selects only the requested project's context",
+        "Diagnoses observed friction before choosing two or three models",
+        "Uses the provided tier prices without fabricating a comparison price",
+        "Does not recommend a preselected paid tier or invented scarcity",
+        "Separates facts from hypotheses and missing evidence",
+        "Proposes a measurable test and disconfirming outcome"
       ],
       "files": []
     },
@@ -81,6 +80,42 @@
         "References or defers to ab-testing skill",
         "May provide psychological context for hypothesis",
         "Does not attempt full test design using psychology patterns"
+      ],
+      "files": []
+    },
+    {
+      "id": 7,
+      "prompt": "We have two contexts: .agents/marketing-contexts/property.md for a client and .agents/marketing-contexts/indie-app.md for my own product. Review the indie app's sign-up page using marketing psychology. The active pointer still names property.md.",
+      "expected_output": "Explicitly select indie-app.md, disregard the stale pointer, and avoid client claims, voice or visual directions. Diagnose sign-up friction before picking a small number of models.",
+      "assertions": [
+        "Explicit named project overrides active pointer",
+        "Does not merge property client claims into independent product",
+        "Diagnoses friction before prescribing models"
+      ],
+      "files": []
+    },
+    {
+      "id": 8,
+      "prompt": "Use scarcity and social proof on our property landing page. We have a 30–50% target ROI, but no completed project result or deadline to cite. The generated building image looks like a real project.",
+      "expected_output": "Treat ROI as a target, not achieved return. Do not invent scarcity, testimonials or project evidence. Label generated imagery as conceptual or use verified real project assets. Offer a transparent alternative and test hypothesis.",
+      "assertions": [
+        "Labels target ROI as target",
+        "Rejects invented deadline and social proof",
+        "Does not present generated building as completed work",
+        "Offers measurable ethical alternative"
+      ],
+      "files": []
+    },
+    {
+      "id": 9,
+      "prompt": "Our appointment page has low bookings after visitors click. Should we add FOMO and a countdown? The scheduler might fail on mobile, and we have not checked completion tracking.",
+      "expected_output": "Check mobile scheduler completion and tracking first, distinguish observed facts and hypotheses, and avoid a countdown without a real deadline. Suggest a measurable fix and route experiment design to ab-testing.",
+      "assertions": [
+        "Prioritizes functional funnel diagnosis",
+        "Does not invent a deadline",
+        "Separates observation from hypothesis",
+        "Defines booking completion event",
+        "References ab-testing for test design"
       ],
       "files": []
     }
